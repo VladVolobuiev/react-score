@@ -7,7 +7,11 @@ const ProductCard = (props) => {
         <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
           <Card.Title>T-shirt</Card.Title>
-          <Card.Text>{props.state}</Card.Text>
+          <Card.Text>
+            {props.id}
+            {props.color}
+            {props.price}
+          </Card.Text>
           <Button variant="primary">add to basket</Button>
         </Card.Body>
       </Card>

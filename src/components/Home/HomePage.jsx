@@ -8,7 +8,7 @@ const HomePage = (props) => {
     return (
       <div key={m.id}>
         <ul>
-          <ProductCard state={m.id} state={m.price} state={m.color} />
+          <ProductCard id={m.id} price={m.price} color={m.color} />
         </ul>
       </div>
     );
