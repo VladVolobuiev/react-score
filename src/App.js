@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import HeaderPage from './components/Header/HeaderPage';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import HomePage from './components/Home/HomePage';
+import FooterMain from './components/Footer/FooterPage';
+import BasketPage from './components/Basket/BasketPage';
+import LoginPage from './components/Login/LoginPage';
+import React from 'react';
+import CardContainer from './components/Home/HomePageContainer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <HeaderPage />
+        <Switch>
+          <Route exact path="/" component={CardContainer} />
+          <Route path="/Basket" component={BasketPage} />
+          <Route path="/Login" component={LoginPage} />
+        </Switch>
+        <FooterMain />
+      </div>
+    );
+  }
 }
 
 export default App;

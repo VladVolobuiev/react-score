@@ -1,0 +1,43 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+.fa-facebook {
+  color: #3b5998;
+}
+
+.fa-instagram {
+  color: #e3397d;
+}
+
+.fa-twitter {
+  color: #00aced;
+}
+
+.fa-facebook:hover,
+.fa-instagram:hover,
+.fa-twitter:hover {
+  color: #b07a17;
+} */
+
+.aws-btn {
+  --button-default-height: 35px;
+  --button-default-font-size: 14px;
+  --button-default-border-radius: 10px;
+  --button-horizontal-padding: 15px;
+  --button-raise-level: 5px;
+  --button-hover-pressure: 2;
+  --transform-speed: 0.185s;
+  --button-primary-color: #475472;
+  --button-primary-color-dark: #2a3143;
+  --button-primary-color-light: #d4d9e4;
+  --button-primary-color-hover: #424e6a;
+  --button-primary-border: 0px solid #ffffff;
+  --button-secondary-color: #fffc6c;
+  --button-secondary-color-dark: #b9b500;
+  --button-secondary-color-light: #6c6a00;
+  --button-secondary-color-hover: #fffb3e;
+  --button-secondary-border: 0px solid #ffffff;
+  --button-anchor-color: #f3c8ad;
+  --button-anchor-color-dark: #734922;
+  --button-anchor-color-light: #4c3016;
+  --button-anchor-color-hover: #f1bfa0;
+  --button-anchor-border: 0px solid #8c633c;
+}

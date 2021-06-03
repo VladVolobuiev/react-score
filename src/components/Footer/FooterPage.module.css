@@ -1,0 +1,8 @@
+footer {
+  background-color: #000000;
+  background-blend-mode: multiply;
+  padding-top: 50px;
+  border-top: 4px solid silver;
+  color: white;
+  text-shadow: 1px 1px 10px #000;
+}

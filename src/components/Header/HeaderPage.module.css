@@ -1,0 +1,16 @@
+/* .login_wrapper {
+  display: flex;
+  justify-items: right;
+} */
+.nav_link {
+  text-decoration: none;
+}
+
+.login_wrapper {
+  margin-right: 10px;
+}
+.form_wrapper {
+  position: absolute;
+  right: 10px;
+  top: 9px;
+}
