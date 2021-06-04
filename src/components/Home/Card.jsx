@@ -1,4 +1,5 @@
 import { Card, Button } from 'react-bootstrap';
+import { Icon } from 'semantic-ui-react';
 
 const ProductCard = (props) => {
   return (
@@ -10,6 +11,7 @@ const ProductCard = (props) => {
           <Card.Text>
             {props.id}
             {props.color}
+            <Icon name="usd" />
             {props.price}
           </Card.Text>
           <Button variant="primary">add to basket</Button>

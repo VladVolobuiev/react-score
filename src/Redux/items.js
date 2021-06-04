@@ -1,7 +1,9 @@
 const SET_ITEMS = 'SET_ITEMS';
+const SET_FILTER = 'SET_FILTER';
 
 const initialState = {
-  // isLoading: false,
+  isLoading: false,
+  filterBe: 'all',
   items: [
     {
       id: 1,
@@ -23,6 +25,11 @@ const initialState = {
       color: 'grey',
       price: 350,
     },
+    {
+      id: 5,
+      color: 'yellow',
+      price: 400,
+    },
   ],
 };
 
@@ -32,7 +39,12 @@ const itemsReducer = (state = initialState, action) => {
       return {
         ...state,
         items: action.payload,
-        // isLoading: true,
+        isLoading: true,
+      };
+    case SET_FILTER:
+      return {
+        ...state,
+        filterBe: action.payload,
       };
     default:
       return state;
@@ -42,6 +54,10 @@ const itemsReducer = (state = initialState, action) => {
 export const setItems = (id, color, price) => ({
   type: SET_ITEMS,
   payload: { id, color, price },
+});
+export const setFilter = (filter) => ({
+  type: SET_FILTER,
+  payload: { filter },
 });
 
 export default itemsReducer;

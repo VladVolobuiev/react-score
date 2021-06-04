@@ -8,9 +8,15 @@ import BasketPage from './components/Basket/BasketPage';
 import LoginPage from './components/Login/LoginPage';
 import React from 'react';
 import CardContainer from './components/Home/HomePageContainer';
+import { connect } from 'react-redux';
+// import Preloader from './components/Preloader/Preloader';
+import 'semantic-ui-css/semantic.min.css';
 
 class App extends React.Component {
   render() {
+    // if (!this.props.state) {
+    //   return <Preloader />;
+    // }
     return (
       <div className="App">
         <HeaderPage />
@@ -18,11 +24,16 @@ class App extends React.Component {
           <Route exact path="/" component={CardContainer} />
           <Route path="/Basket" component={BasketPage} />
           <Route path="/Login" component={LoginPage} />
+          <Route path="*" render={() => <div>404 NOT FOUND</div>} />
         </Switch>
         <FooterMain />
       </div>
     );
   }
 }
-
-export default App;
+let mapStateToProps = (state) => {
+  return {
+    items: state.items,
+  };
+};
+export default connect(mapStateToProps, {})(App);
