@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 
 let mapStateToProps = (state) => {
   return {
+    filterBy: state.filterBy,
     items: state.items,
   };
 };

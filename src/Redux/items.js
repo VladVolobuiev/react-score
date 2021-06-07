@@ -2,8 +2,7 @@ const SET_ITEMS = 'SET_ITEMS';
 const SET_FILTER = 'SET_FILTER';
 
 const initialState = {
-  isLoading: false,
-  filterBe: 'all',
+  // isLoading: false,
   items: [
     {
       id: 1,
@@ -31,20 +30,22 @@ const initialState = {
       price: 400,
     },
   ],
+  filterBy: 'Home',
 };
 
-const itemsReducer = (state = initialState, action) => {
+const cardReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_ITEMS:
       return {
         ...state,
         items: action.payload,
-        isLoading: true,
+        // isLoading: true,
       };
+
     case SET_FILTER:
       return {
         ...state,
-        filterBe: action.payload,
+        filterBy: action.payload,
       };
     default:
       return state;
@@ -60,4 +61,4 @@ export const setFilter = (filter) => ({
   payload: { filter },
 });
 
-export default itemsReducer;
+export default cardReducer;

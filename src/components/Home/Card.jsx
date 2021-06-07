@@ -1,7 +1,11 @@
 import { Card, Button } from 'react-bootstrap';
 import { Icon } from 'semantic-ui-react';
 
-const ProductCard = (props) => {
+const ProductCard = (tShirt) => {
+  const { addedCount, id, color, price, setAddToCard } = tShirt;
+  // const sumOfValues = (tShirt) => {
+  //   return setAddToCard.bind(this, tShirt);
+  // };
   return (
     <div>
       <Card style={{ width: '18rem' }}>
@@ -9,12 +13,14 @@ const ProductCard = (props) => {
         <Card.Body>
           <Card.Title>T-shirt</Card.Title>
           <Card.Text>
-            {props.id}
-            {props.color}
+            {id}
+            {color}
             <Icon name="usd" />
-            {props.price}
+            {price}
           </Card.Text>
-          <Button variant="primary">add to basket</Button>
+          <Button variant="primary" onClick={setAddToCard.bind(this, tShirt)}>
+            add to basket {addedCount > 0 && `(${addedCount})`}
+          </Button>
         </Card.Body>
       </Card>
     </div>
